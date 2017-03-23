@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="col-sm-6 col-md-3 list-item"" ng-controller="DetailViewController">
+    <img ng-src="{{product.picture}}" style="width: 75%"/>
+    <form ng-submit="saveProduct(product)">
+      <input ng-if="changed" class="form-control" ng-value="product.title" ng-model="product.changedProduct">
+    </form>
+    <h4 ng-if="!changed">{{product.title}}</h4>
+    <span>{{product.price | currency}}</span>
+    <button class="btn btn-xs btn-info" ng-click="addToBasket(user.uid, product._id)" ng-if="user && !user.uAdmin">Add to basket</button>
+    <button class="btn btn-xs btn-info" ng-click="changeProduct()" ng-if="!changed && user.uAdmin">Change</button>
+    <button class="btn btn-xs btn-danger" ng-click="deleteProduct(product)" ng-if="!changed && user.uAdmin">Delete</button>
+    <button class="btn btn-xs btn-success" ng-click="saveProduct(product)" ng-if="changed">Save</button>
+    <button class="btn btn-xs btn-primary" ng-click="cancel()" ng-if="changed">Cancel</button>
+  </div>
+</div>

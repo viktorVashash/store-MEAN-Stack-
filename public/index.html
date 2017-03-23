@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="appMain">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="/js/libs/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/js/libs/bootstrap/dist/css/bootstrap-theme.min.css" />
+    <link rel="stylesheet" type="text/css" href="/css/style.css"/>
+    <script src="/js/libs/jquery/dist/jquery.min.js"></script>
+    <title>Well Dressed</title>
+</head>
+<body ng-controller="UserController">
+  <div class="slide">
+    <div class="header">
+      <div class="navbar">
+        <ul class="navigate">
+            <li><a class="btn nav-btn btn-sm" href="#/" type="button">Главная</a></li>
+            <li><a class="btn nav-btn btn-sm" href="#product" type="button">Магазин</a></li>
+            <li><a class="btn nav-btn btn-sm" href="#user" type="button">Пользователи</a></li>
+            <li ng-if="!user"><a class="btn nav-btn btn-sm" href="#login" data-toggle="modal" data-target="#myModal">Вход</a></li>
+            <li><a ng-if="user && !user.uAdmin" class="btn nav-btn btn-sm" href="#basket/{{user.uid}}" type="button"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"><span class="badge">{{user.uBasket.length}}</span></span></a></li>
+            <li ng-if="user"><a class="btn nav-btn btn-sm" href="#logout" type="button" ng-click="logout()">Выход</a></li>
+        </ul>
+      </div>
+      <div class="home " align="center">
+        <div class="container">
+          <h1>Well Dressed</h1>
+          <img src="/imgs/icons/icon.png" />
+          <h3>магазин дизайнерской одежды</h3>
+        </div>
+      </div>
+    </div>
+    <div class="products">
+      <ng-view></ng-view>
+    </div>
+  </div>
+
+  <script src="/js/libs/angular/angular.js"></script>
+  <script src="/js/libs/angular-route/angular-route.js"></script>
+  <script src="/js/libs/bootstrap/dist/js/bootstrap.js"></script>
+  <script src="/js/libs/ng-file-upload/ng-file-upload.min.js"></script>
+  <!-- Controllers -->
+  <script src="/js/app/main/controllers/mainCtrl.js"></script>
+  <script src="/js/app/user/controllers/userCtrl.js"></script>
+  <script src="/js/app/user/controllers/basketCtrl.js"></script>
+  <script src="/js/app/products/controllers/productsCtrl.js"></script>
+  <!-- Services -->
+  <script src="/js/app/products/services/paginationService.js"></script>
+  <script src="/js/app/user/services/authService.js"></script>
+  <!-- App -->
+  <script src="/js/app.js"></script>
+
+</body>
+</html>

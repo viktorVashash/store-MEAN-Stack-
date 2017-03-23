@@ -1,0 +1,40 @@
+{
+  "name": "vitrila1",
+  "version": "1.0.0",
+  "main": "bonus.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "bcrypt": "0.8.6",
+    "bcryptjs": "2.3.0",
+    "body-parser": "1.15.0",
+    "bookshelf": "0.9.4",
+    "connect-mongo": "0.8.0",
+    "cookie-parser": "1.4.1",
+    "cookie-session": "^2.0.0-alpha.1",
+    "express": "4.13.4",
+    "express-session": "1.13.0",
+    "jade": "1.11.0",
+    "jquery": "^2.2.4",
+    "jsdom": "^9.1.0",
+    "knex": "0.10.0",
+    "lodash": "4.10.0",
+    "mongodb": "^2.1.18",
+    "mongoose": "4.4.16",
+    "morgan": "1.7.0",
+    "passport": "^0.3.2",
+    "passport-local": "^1.0.0",
+    "path": "0.12.7",
+    "pg": "4.5.3",
+    "requirejs-text": "^2.0.12"
+  }
+}

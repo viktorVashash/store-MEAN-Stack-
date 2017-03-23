@@ -1,0 +1,235 @@
+@-webkit-keyframes hide_login {
+  0% {
+    -webkit-transform: rotateY(0deg);
+    box-shadow: 0 0 5px #d0d0d0;
+  }
+  50% {
+    box-shadow: 0 0 15px #d0d0d0;
+  }
+  100% {
+    -webkit-transform: rotateY(100deg);
+    box-shadow: 0 0 5px #d0d0d0;
+  }
+}
+
+@-webkit-keyframes show_register {
+  0% {
+    -webkit-transform: rotateY(100deg);
+    box-shadow: 0 0 5px #d0d0d0;
+  }
+  50% {
+    box-shadow: 0 0 15px #d0d0d0;
+  }
+  100% {
+    -webkit-transform: rotateY(0deg);
+    box-shadow: 0 0 5px #d0d0d0;
+  }
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  background-color: #fff;
+  height: 100%;
+  font: 14px/18px Arial;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/*Шапка сайта */
+
+.header {
+  position: relative;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  width: 100%;
+  height: 500px;
+  background-image: url(../imgs/back.jpg);
+  background-attachment: fixed;
+}
+
+.header:before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(49, 53, 58, 0.6);
+}
+
+.navigate {
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+
+.nav-btn {
+  color: #fff;
+  border: 1px solid #ffffff;
+}
+
+.header.default {
+  position: fixed;
+  top: 0;
+}
+
+.container {
+  position: relative;
+}
+
+/*Меню в шапке*/
+
+.navigate {
+  float: right;
+  padding-top: 5px;
+}
+
+.navigate li {
+  float: left;
+  margin-right: 35px;
+}
+
+
+/* Секция HOME */
+
+
+.home h3 {
+  z-index: 2;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 40px;
+  text-transform: none;
+  font: 40px/46px "Courier New", sans-serif;
+}
+
+.home h1 {
+  color: #ffffff;
+  margin-top: 20px;
+  text-align: center;
+  font: 75px/80px Inspiration, sans-serif;
+}
+
+.products {
+  position: relative;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  width: 100%;
+  background-image: url(../imgs/back.jpg);
+  background-attachment: fixed;
+  font: bold 20px/20px 'Courier New', sans-serif;
+}
+
+.products:before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(49, 53, 58, 0.6);
+}
+
+.darkness {
+  position: relative;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  width: 100%;
+  background-attachment: fixed;
+  font: bold 20px/20px 'Courier New', sans-serif;
+}
+
+.darkness:before {
+  content: '';
+  position: absolute;
+  /*display: block;
+  margin: 0 320px;*/
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background: rgba(49, 53, 58, 0.3);
+}
+
+.item img {
+  /*width: 50%;
+  display: block;
+  margin: 0 auto;*/
+}
+
+.list-item {
+  background-color: #fff;
+  color: #111111;
+  margin-top: 30px;
+  padding: 30px 30px 30px 30px;
+  border: 1px solid #F5F5F5;
+  margin-top: -1px;
+  display: block;
+}
+
+.loginForm {
+  margin: 0 auto;
+  position: absolute;
+  left: 150px;
+  top: 100px;
+  background: #a0a0a0;
+  padding: 10px;
+  width: 50%;
+  border-radius: 5px;
+  height: 400px;
+  color: #ffffff;
+}
+
+.wr {
+  display:block;
+    position:absolute;
+    left:0;
+    bottom:0;
+    width:100%;
+    box-sizing:border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+#registerForm {
+  margin: 0 auto;
+  position: absolute;
+  left: 100px;
+  top: 100px;
+  background: #a0a0a0;
+  padding: 10px;
+  width: 70%;
+  border-radius: 5px;
+  height: 750px;
+  color: #fff;
+}
+
+#loginForm {
+  -webkit-animation-duration: 1s;
+  -webkit-backface-visibility: hidden;
+}
+
+#registerForm {
+  -webkit-transform: rotateY(100deg);
+  -webkit-backface-visibility: hidden;
+  -webkit-animation-duration: 5s;
+}

@@ -1,0 +1,5 @@
+{
+  "directory" : "public/js/libs",
+  "static" : false,
+  "timeout" : 1200000
+}

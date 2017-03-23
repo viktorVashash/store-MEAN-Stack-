@@ -1,0 +1,40 @@
+<div class="container">
+  <a class="btn btn-sm nav-btn" data-toggle="modal" data-target="#myModal">New Product</a>
+  <h4 style="color: #fff">{{user.uName}}</h4>
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="panel panel-default">
+          <form ng-controller="ListViewController">
+            <div class="form-group">
+              <label>Title</label>
+              <input class="form-control" ng-model="product.title" type="text" placeholder="Title">
+            </div>
+            <div class="form-group">
+              <label>Price</label>
+              <input class="form-control" ng-model="product.price" type="text" placeholder="Price">
+            </div>
+            <div class="form-group">
+              <label>Image</label>
+              <input class="form-control" ng-model="product.picture" type="text">
+            </div>
+            <button class="btn btn-sm nav-btn" ng-click="save(product)">Save</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-6 col-md-3 list-item" ng-repeat="product in products">
+    <a href="#/product/{{product._id}}">
+      <img ng-src="{{product.picture}}" style="width: 100%" class="img-rounded"/>
+      <h4>{{product.title}}</h4>
+      <span>{{product.price | currency}}</span>
+    </a>
+  </div>
+</div>
+<nav class="pagination-wrap" style="text-align:center">
+  <ul class="pagination">
+    <li ng-repeat="page in paginationList" ng-click="showPage(page.link)" ng-class="{'active': currentPageNum() == page.link}"><a ng-bind-html="page.name"></a></li>
+  </ul>
+</nav>
